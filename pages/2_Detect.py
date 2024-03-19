@@ -24,7 +24,7 @@ pic = st.file_uploader(
     accept_multiple_files=False,
     help="Upload a picture of your skin to get a diagnosis",
 )
-
+st.write("Please upload an image of a mole. Make sure to take it in good lighting to ensure the most accurate result")
 if st.button("Predict"):
     if pic != None:
         st.header("Results")
