@@ -76,3 +76,21 @@ if st.button("Predict"):
         )
     else:
         st.error("Please upload an image")
+        
+        
+        
+        with st.container():
+    st.write("---")
+    left_column, right_column = st.columns(2)
+    with left_column:
+        st.header("How to Understand Confidence")
+        st.write("##")
+        st.write(
+            """
+            This section is mainly for those who have their diagnosis as Malignant.
+            - If Confidence is 50-60%: You should still get the "mole" checked out as it not detected as Malignant depending on the Diagnosis
+            - If Confidence is 61-80%: You have a high change that the diagnosis is correct. Recommended to check with Dermatologists just to be sure
+            - If Confidence is 81-100%: Your chances that the diagnosis is correct is very high. Recommended to check with Dermatologist to be sure and the take further actions into removing it.
+            If you believe you have Malignant, be sure to check the "Articles" page on the left side of the screen to learn more about the different types of skin cancer, to further educate yourself.
+            """
+        )
