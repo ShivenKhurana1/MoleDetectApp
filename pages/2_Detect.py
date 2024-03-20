@@ -82,7 +82,6 @@ if st.button("Predict"):
 with st.container():
     st.write("---")
     left_column, right_column = st.columns(2)
-    with left_column:
         st.header("How to Understand Confidence")
         st.write("##")
         st.write(
