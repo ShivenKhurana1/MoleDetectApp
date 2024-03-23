@@ -157,13 +157,13 @@ with st.container():
 with st.container():
     st.write("---")
     left_column, right_column = st.columns(2)
-    with left_column:
+    with right_column:
         st.write("##")
         st.write("##")
         st.write("##")
         st.write("##")
         st.image(img_melanoma)
-    with right_column:
+    with left_column:
         st.header("Melanoma")
         st.write("##")
         st.write(
