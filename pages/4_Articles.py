@@ -70,7 +70,7 @@ with st.container():
 with st.container():
     st.write("---")
     left_column, right_column = st.columns(2)
-    with left_column:
+    with right_column:
         st.header("Actinic keratosis")
         st.write("##")
         st.write(
@@ -85,7 +85,7 @@ with st.container():
             """
         )
         st.write("[Learn More](https://www.nhs.uk/conditions/actinic-keratoses)")
-    with right_column:
+    with left_column:
         st.write("##")
         st.write("##")
         st.write("##")
