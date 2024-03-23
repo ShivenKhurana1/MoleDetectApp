@@ -104,63 +104,63 @@ with st.container():
     
     
     with st.container():
-    st.write("---")
-    left_column, right_column = st.columns(2)
-    with left_column:
-        st.header("Dermatofibroma")
-        st.write("##")
-        st.write(
-            """
-            Dermatofibromas are harmless growths within the skin that usually have a small diameter. They can vary in color but are typically pink to light brown in light skin and dark brown or black in dark skin. They may appear more pink or darker if a person accidentally irritates them — for example, when shaving.
-            As they are dense and firm to the touch, many people say that they feel like a small stone underneath or raised above the skin. Most dermatofibromas are painless, but some people experience itching, irritation, or tenderness at the site of the growth.
-            Some doctors or medical researchers may referTrusted Source to dermatofibromas as benign fibrous histiocytomas.
-            Key markers of a dermatofibroma are:
-            - Appearance: A dermatofibroma presents as a round bump that is mostly under the skin.
-            - Size: The normal range is about 0.5–1.5 centimeters (cm), with most lesions being 0.7–1.0 cm in diameter. The size will usually remain stable.
-            - Color: The growths vary in color among individuals but will generally be pink, red, gray, brown, or black.
-            - Location: Dermatofibromas are most common on the legs, but they sometimes appear on the arms, trunk, and, less commonly, elsewhere on the body.
-            - Additional symptoms: Although they are usually harmless and painless, these growths may occasionally be itchy, tender, painful, or inflamed.
-            """
-        )
-        st.write(
+        st.write("---")
+        left_column, right_column = st.columns(2)
+        with left_column:
+            st.header("Dermatofibroma")
+            st.write("##")
+            st.write(
+                """
+                Dermatofibromas are harmless growths within the skin that usually have a small diameter. They can vary in color but are typically pink to light brown in light skin and dark brown or black in dark skin. They may appear more pink or darker if a person accidentally irritates them — for example, when shaving.
+                As they are dense and firm to the touch, many people say that they feel like a small stone underneath or raised above the skin. Most dermatofibromas are painless, but some people experience itching, irritation, or tenderness at the site of the growth.
+                Some doctors or medical researchers may referTrusted Source to dermatofibromas as benign fibrous histiocytomas.
+                Key markers of a dermatofibroma are:
+                - Appearance: A dermatofibroma presents as a round bump that is mostly under the skin.
+                - Size: The normal range is about 0.5–1.5 centimeters (cm), with most lesions being 0.7–1.0 cm in diameter. The size will usually remain stable.
+                - Color: The growths vary in color among individuals but will generally be pink, red, gray, brown, or black.
+                - Location: Dermatofibromas are most common on the legs, but they sometimes appear on the arms, trunk, and, less commonly, elsewhere on the body.
+                - Additional symptoms: Although they are usually harmless and painless, these growths may occasionally be itchy, tender, painful, or inflamed.
+                """
+            )
+            st.write(
             "[Learn More](https://www.medicalnewstoday.com/articles/318870#treatment)")
-    with right_column:
-        st.write("##")
-        st.write("##")
-        st.write("##")
-        st.write("##")
-        st.image(img_dermatofibroma)
+        with right_column:
+            st.write("##")
+            st.write("##")
+            st.write("##")
+            st.write("##")
+            st.image(img_dermatofibroma)
 
     
     with st.container():
-    st.write("---")
-    left_column, right_column = st.columns(2)
-    with left_column:
-        st.write("##")
-        st.write("##")
-        st.write("##")
-        st.write("##")
-        st.image(img_Seborrheic)
-    with right_column:
-        st.header("Seborrheic keratosis")
-        st.write("##")
-        st.write(
-            """
-            A seborrheic keratosis (seb-o-REE-ik ker-uh-TOE-sis) is a common noncancerous (benign) skin growth. People tend to get more of them as they get older.
-            Seborrheic keratoses are usually brown, black or light tan. The growths (lesions) look waxy or scaly and slightly raised. They appear gradually, usually on the face, neck, chest or back.
-            Seborrheic keratoses are harmless and not contagious. They don't need treatment, but you may decide to have them removed if they become irritated by clothing or you don't like how they look.
-            A seborrheic keratosis grows gradually. Signs and symptoms might include:
-            - A round or oval-shaped waxy or rough bump, typically on the face, chest, a shoulder or the back
-            - A flat growth or a slightly raised bump with a scaly surface, with a characteristic "pasted on" look
-            - Varied size, from very small to more than 1 inch (2.5 centimeters) across
-            - Varied number, ranging from a single growth to multiple growths
-            - Very small growths clustered around the eyes or elsewhere on the face, sometimes called flesh moles or dermatosis papulosa nigra, common on Black or brown skin
-            - Varied in color, ranging from light tan to brown or black
-            - Itchiness
-            """
-        )
-        st.write(
-            "[Learn More](https://www.mayoclinic.org/diseases-conditions/seborrheic-keratosis/symptoms-causes/syc-20353878)")
+        st.write("---")
+        left_column, right_column = st.columns(2)
+        with left_column:
+            st.write("##")
+            st.write("##")
+            st.write("##")
+            st.write("##")
+            st.image(img_Seborrheic)
+        with right_column:
+            st.header("Seborrheic keratosis")
+            st.write("##")
+            st.write(
+                """
+                A seborrheic keratosis (seb-o-REE-ik ker-uh-TOE-sis) is a common noncancerous (benign) skin growth. People tend to get more of them as they get older.
+                Seborrheic keratoses are usually brown, black or light tan. The growths (lesions) look waxy or scaly and slightly raised. They appear gradually, usually on the face, neck, chest or back.
+                Seborrheic keratoses are harmless and not contagious. They don't need treatment, but you may decide to have them removed if they become irritated by clothing or you don't like how they look.
+                A seborrheic keratosis grows gradually. Signs and symptoms might include:
+                - A round or oval-shaped waxy or rough bump, typically on the face, chest, a shoulder or the back
+                - A flat growth or a slightly raised bump with a scaly surface, with a characteristic "pasted on" look
+                - Varied size, from very small to more than 1 inch (2.5 centimeters) across
+                - Varied number, ranging from a single growth to multiple growths
+                - Very small growths clustered around the eyes or elsewhere on the face, sometimes called flesh moles or dermatosis papulosa nigra, common on Black or brown skin
+                - Varied in color, ranging from light tan to brown or black
+                - Itchiness
+                """
+            )
+            st.write(
+                "[Learn More](https://www.mayoclinic.org/diseases-conditions/seborrheic-keratosis/symptoms-causes/syc-20353878)")
 
 with st.container():
     st.write("---")
