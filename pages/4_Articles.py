@@ -91,15 +91,7 @@ with st.container():
         st.write("##")
         st.image(img_actinic)
 
-with st.container():
-    st.write("---")
-    left_column, right_column = st.columns(2)
-    with left_column:
-        st.write("##")
-        st.write("##")
-        st.write("##")
-        st.write("##")
-        st.image(img_basal)
+
 
     
     
@@ -196,6 +188,16 @@ with st.container():
 
     
     
+   with st.container():
+    st.write("---")
+    left_column, right_column = st.columns(2)
+    with left_column:
+        st.write("##")
+        st.write("##")
+        st.write("##")
+        st.write("##")
+        st.image(img_basal)
+
     with right_column:
         st.header("Basal cell carcinoma")
         st.write("##")
