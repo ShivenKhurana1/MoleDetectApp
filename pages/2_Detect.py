@@ -16,7 +16,7 @@ def load_model():
     return model
 
 
-st.title("MoleDetect Detection")
+st.title("MoleDetect")
 st.write("Please upload an image of a mole. Make sure to take it in good lighting to ensure the most accurate result.")
 pic = st.file_uploader(
     label="Upload a picture",
