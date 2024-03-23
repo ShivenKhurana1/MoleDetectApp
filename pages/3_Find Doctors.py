@@ -10,7 +10,7 @@ st.set_page_config(
 )
 
 # Replace YOUR_API_KEY with your actual API key
-api_key = st.secrets["api_key"]
+api_key = st.secrets["AIzaSyBOSZuqGTKA0ZCfmhbR_0yVEmVdceK3Qh4"]
 
 
 st.title("Find a dermatologist")
