@@ -35,6 +35,38 @@ st.title("Learn More")
 st_lottie(lottie_disease, height=300, key="disease")
 st.subheader("Read articles about some common skin diseases that are usually found in people.")
 
+#BENIGN
+
+with st.container():
+    st.write("---")
+    left_column, right_column = st.columns(2)
+    with left_column:
+        st.header("Nevus")
+        st.write("##")
+        st.write(
+            """
+            Nevus (plural: nevi) is the medical term for a mole. Nevi are very common. Most peopleTrusted Source have between 10 and 40. Common nevi are harmless collections of colored cells. They typically appear as small brown, tan, or pink spots.
+            You can be born with moles or develop them later. Moles that you're born with are known as congenital moles. However, most moles develop during childhood and adolescence. This is known as an acquired nevus. Moles can also develop later in life as a result of sun exposure.
+            There are many types of nevi. Some of them are harmless and others more serious. Read on to learn about the different types and how to know whether you should get one checked out by your doctor.
+            If you're unsure of what type of nevus you have, it's best to have your doctor or dermatologist take a look.
+            If your nevus seems to be changing or your doctor isn't sure what it is, they might perform a skin biopsy. This is the only way to confirm or rule out skin cancer.
+            There are a few ways to do this:
+            - Shave biopsy. Your doctor uses a razor to shave off a sample of the top layers of your skin
+            - Punch biopsy. Your doctor uses a special punch tool to remove a sample of skin that contains both the top and deeper layers of skin.
+            - Excisional biopsy. Your doctor uses a scalpel to remove your entire mole and some of the other skin around it.
+            """
+        )
+        st.write(
+            "[Learn More](https://www.healthline.com/health/nevus#diagnosis)")
+    with right_column:
+        st.write("##")
+        st.write("##")
+        st.write("##")
+        st.write("##")
+        st.image(img_nevus)
+
+
+
 with st.container():
     st.write("---")
     left_column, right_column = st.columns(2)
@@ -69,30 +101,9 @@ with st.container():
         st.write("##")
         st.image(img_basal)
 
-    with right_column:
-        st.header("Basal cell carcinoma")
-        st.write("##")
-        st.write(
-            """
-            Basal cell carcinoma is a type of skin cancer. Basal cell carcinoma begins in the basal cells — a type of cell within the skin that produces new skin cells as old ones die off.
-            Basal cell carcinoma often appears as a slightly transparent bump on the skin, though it can take other forms. Basal cell carcinoma occurs most often on areas of the skin that are exposed to the sun, such as your head and neck.
-            Most basal cell carcinomas are thought to be caused by long-term exposure to ultraviolet (UV) radiation from sunlight. Avoiding the sun and using sunscreen may help protect against basal cell carcinoma.
-            Basal cell carcinoma appears as a change in the skin, such as a growth or a sore that won't heal. These changes in the skin (lesions) usually have one of the following characteristics:
-            - A shiny, skin-colored bump that's translucent, meaning you can see a bit through the surface. The bump can look pearly white or pink on white skin. On brown and Black skin, the bump often looks brown or glossy black. Tiny blood vessels might be visible, though they may be difficult to see on brown and Black skin. The bump may bleed and scab over.
-            - A brown, black or blue lesion — or a lesion with dark spots — with a slightly raised, translucent border.
-            - A flat, scaly patch with a raised edge. Over time, these patches can grow quite large.
-            - A white, waxy, scar-like lesion without a clearly defined border.
-            To reduce your risk of basal cell carcinoma you can:
-            - Avoid the sun during the middle of the day
-            - Wear sunscreen year-round
-            - Wear protective clothing
-            - Avoid tanning beds
-            - Check your skin regularly and report changes to your doctor
-           """
-        )
-        st.write("[Learn More](https://www.mayoclinic.org/diseases-conditions/basal-cell-carcinoma/symptoms-causes/syc-20354187#:~:text=on%20brown%20skin-,Basal%20cell%20carcinoma%20is%20a%20type%20of%20skin%20cancer%20that,a%20type%20of%20skin%20cancer.)")
-
-with st.container():
+    
+    
+    with st.container():
     st.write("---")
     left_column, right_column = st.columns(2)
     with left_column:
@@ -119,6 +130,37 @@ with st.container():
         st.write("##")
         st.write("##")
         st.image(img_dermatofibroma)
+
+    
+    with st.container():
+    st.write("---")
+    left_column, right_column = st.columns(2)
+    with left_column:
+        st.write("##")
+        st.write("##")
+        st.write("##")
+        st.write("##")
+        st.image(img_Seborrheic)
+    with right_column:
+        st.header("Seborrheic keratosis")
+        st.write("##")
+        st.write(
+            """
+            A seborrheic keratosis (seb-o-REE-ik ker-uh-TOE-sis) is a common noncancerous (benign) skin growth. People tend to get more of them as they get older.
+            Seborrheic keratoses are usually brown, black or light tan. The growths (lesions) look waxy or scaly and slightly raised. They appear gradually, usually on the face, neck, chest or back.
+            Seborrheic keratoses are harmless and not contagious. They don't need treatment, but you may decide to have them removed if they become irritated by clothing or you don't like how they look.
+            A seborrheic keratosis grows gradually. Signs and symptoms might include:
+            - A round or oval-shaped waxy or rough bump, typically on the face, chest, a shoulder or the back
+            - A flat growth or a slightly raised bump with a scaly surface, with a characteristic "pasted on" look
+            - Varied size, from very small to more than 1 inch (2.5 centimeters) across
+            - Varied number, ranging from a single growth to multiple growths
+            - Very small growths clustered around the eyes or elsewhere on the face, sometimes called flesh moles or dermatosis papulosa nigra, common on Black or brown skin
+            - Varied in color, ranging from light tan to brown or black
+            - Itchiness
+            """
+        )
+        st.write(
+            "[Learn More](https://www.mayoclinic.org/diseases-conditions/seborrheic-keratosis/symptoms-causes/syc-20353878)")
 
 with st.container():
     st.write("---")
@@ -152,65 +194,32 @@ with st.container():
         st.write(
             "[Learn More](https://www.mayoclinic.org/diseases-conditions/melanoma/symptoms-causes/syc-20374884#:~:text=Melanoma%2C%20the%20most%20serious%20type,in%20your%20nose%20or%20throat.)")
 
-
-with st.container():
-    st.write("---")
-    left_column, right_column = st.columns(2)
-    with left_column:
-        st.header("Nevus")
-        st.write("##")
-        st.write(
-            """
-            Nevus (plural: nevi) is the medical term for a mole. Nevi are very common. Most peopleTrusted Source have between 10 and 40. Common nevi are harmless collections of colored cells. They typically appear as small brown, tan, or pink spots.
-            You can be born with moles or develop them later. Moles that you're born with are known as congenital moles. However, most moles develop during childhood and adolescence. This is known as an acquired nevus. Moles can also develop later in life as a result of sun exposure.
-            There are many types of nevi. Some of them are harmless and others more serious. Read on to learn about the different types and how to know whether you should get one checked out by your doctor.
-            If you're unsure of what type of nevus you have, it's best to have your doctor or dermatologist take a look.
-            If your nevus seems to be changing or your doctor isn't sure what it is, they might perform a skin biopsy. This is the only way to confirm or rule out skin cancer.
-            There are a few ways to do this:
-            - Shave biopsy. Your doctor uses a razor to shave off a sample of the top layers of your skin
-            - Punch biopsy. Your doctor uses a special punch tool to remove a sample of skin that contains both the top and deeper layers of skin.
-            - Excisional biopsy. Your doctor uses a scalpel to remove your entire mole and some of the other skin around it.
-            """
-        )
-        st.write(
-            "[Learn More](https://www.healthline.com/health/nevus#diagnosis)")
+    
+    
     with right_column:
-        st.write("##")
-        st.write("##")
-        st.write("##")
-        st.write("##")
-        st.image(img_nevus)
-
-
-with st.container():
-    st.write("---")
-    left_column, right_column = st.columns(2)
-    with left_column:
-        st.write("##")
-        st.write("##")
-        st.write("##")
-        st.write("##")
-        st.image(img_Seborrheic)
-    with right_column:
-        st.header("Seborrheic keratosis")
+        st.header("Basal cell carcinoma")
         st.write("##")
         st.write(
             """
-            A seborrheic keratosis (seb-o-REE-ik ker-uh-TOE-sis) is a common noncancerous (benign) skin growth. People tend to get more of them as they get older.
-            Seborrheic keratoses are usually brown, black or light tan. The growths (lesions) look waxy or scaly and slightly raised. They appear gradually, usually on the face, neck, chest or back.
-            Seborrheic keratoses are harmless and not contagious. They don't need treatment, but you may decide to have them removed if they become irritated by clothing or you don't like how they look.
-            A seborrheic keratosis grows gradually. Signs and symptoms might include:
-            - A round or oval-shaped waxy or rough bump, typically on the face, chest, a shoulder or the back
-            - A flat growth or a slightly raised bump with a scaly surface, with a characteristic "pasted on" look
-            - Varied size, from very small to more than 1 inch (2.5 centimeters) across
-            - Varied number, ranging from a single growth to multiple growths
-            - Very small growths clustered around the eyes or elsewhere on the face, sometimes called flesh moles or dermatosis papulosa nigra, common on Black or brown skin
-            - Varied in color, ranging from light tan to brown or black
-            - Itchiness
-            """
+            Basal cell carcinoma is a type of skin cancer. Basal cell carcinoma begins in the basal cells — a type of cell within the skin that produces new skin cells as old ones die off.
+            Basal cell carcinoma often appears as a slightly transparent bump on the skin, though it can take other forms. Basal cell carcinoma occurs most often on areas of the skin that are exposed to the sun, such as your head and neck.
+            Most basal cell carcinomas are thought to be caused by long-term exposure to ultraviolet (UV) radiation from sunlight. Avoiding the sun and using sunscreen may help protect against basal cell carcinoma.
+            Basal cell carcinoma appears as a change in the skin, such as a growth or a sore that won't heal. These changes in the skin (lesions) usually have one of the following characteristics:
+            - A shiny, skin-colored bump that's translucent, meaning you can see a bit through the surface. The bump can look pearly white or pink on white skin. On brown and Black skin, the bump often looks brown or glossy black. Tiny blood vessels might be visible, though they may be difficult to see on brown and Black skin. The bump may bleed and scab over.
+            - A brown, black or blue lesion — or a lesion with dark spots — with a slightly raised, translucent border.
+            - A flat, scaly patch with a raised edge. Over time, these patches can grow quite large.
+            - A white, waxy, scar-like lesion without a clearly defined border.
+            To reduce your risk of basal cell carcinoma you can:
+            - Avoid the sun during the middle of the day
+            - Wear sunscreen year-round
+            - Wear protective clothing
+            - Avoid tanning beds
+            - Check your skin regularly and report changes to your doctor
+           """
         )
-        st.write(
-            "[Learn More](https://www.mayoclinic.org/diseases-conditions/seborrheic-keratosis/symptoms-causes/syc-20353878)")
+        st.write("[Learn More](https://www.mayoclinic.org/diseases-conditions/basal-cell-carcinoma/symptoms-causes/syc-20354187#:~:text=on%20brown%20skin-,Basal%20cell%20carcinoma%20is%20a%20type%20of%20skin%20cancer%20that,a%20type%20of%20skin%20cancer.)")
+
+
 
 
 with st.container():
