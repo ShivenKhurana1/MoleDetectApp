@@ -21,7 +21,7 @@ lottie_health = load_lottieurl(
     "https://assets2.lottiefiles.com/packages/lf20_5njp3vgg.json"
 )
 lottie_welcome = load_lottieurl(
-    "https://assets1.lottiefiles.com/packages/lf20_puciaact.json"
+    "https://lottie.host/00961e83-3e29-455b-9204-746028c0f364/6eXEr4vk8N.json"
 )
 lottie_healthy = load_lottieurl(
     "https://assets10.lottiefiles.com/packages/lf20_x1gjdldd.json"
