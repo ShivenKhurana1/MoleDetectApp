@@ -1,6 +1,18 @@
 import streamlit as st
 from geopy.geocoders import Nominatim
 import requests
+import streamlit as st
+import pandas as pd
+import matplotlib.pyplot as plt
+import requests
+from langchain import PromptTemplate
+import seaborn as sns
+from transformers import pipeline
+import pytesseract
+from PIL import Image
+from dotenv import load_dotenv
+import os
+
 
 st.set_page_config(
     page_title="Skin Cancer",
@@ -9,60 +21,62 @@ st.set_page_config(
     initial_sidebar_state="expanded",
 )
 
-# Replace YOUR_API_KEY with your actual API key
-api_key = st.secrets["api-key"]
+st.title('Moledetect: Dermafinder')
+st.subheader("Your AI Blood Health Expert")
 
+# Google Places API URL- Converts lat.lng into map data
+url = "https://maps.googleapis.com/maps/api/place/nearbysearch/json"
 
-st.title("Find a dermatologist")
-# Set the location and radius for the search
-city = st.text_input(
-    label="Enter your city",
-    placeholder="City (e.g. New Delhi)",
-    help="Enter the name of the city where you want to find a dermatologist",
-).strip()
+# Google Geocoding API URL - converts text input into lat & lng
+geocode_url = "https://maps.googleapis.com/maps/api/geocode/json"
 
-if city != "":
-    # Create a geolocator object
-    geolocator = Nominatim(user_agent="skin_cancer")
+# Load the environment variables from the .env file
+load_dotenv()
 
-    # Use the geolocator to get the latitude and longitude of the city
-    location = geolocator.geocode(city)
-    latitude = location.latitude
-    longitude = location.longitude
+# Get the API key from the environment variable
+api_key = os.getenv("GOOGLE_API_KEY")
 
-    location = f"{latitude},{longitude}"
-    radius = 10000  # 10 km
-    keyword = "dermatologist"
+# Create a text input field for the location
+location = st.sidebar.text_input("Enter your current location:")
 
-    # Make the request to the Places API
-    url = f"https://maps.googleapis.com/maps/api/place/nearbysearch/json?location={location}&radius={radius}&keyword={keyword}&key={api_key}"
-    response = requests.get(url)
-    results = response.json()["results"]
+# Search & Display nearby clinics
+if location:
+    # Parameters for the geocoding API request
+    geocode_params = {
+        "address": location,  # Location name
+        "key": api_key,  # Your Google Places API key
+    }
 
-    # Extract the place IDs of the results
-    place_ids = [result["place_id"] for result in results]
+    # Send the geocoding API request
+    geocode_response = requests.get(geocode_url, params=geocode_params)
 
-    # Use the place IDs to get the details of the places
-    dermatologists = []
-    for place_id in place_ids:
-        url = f"https://maps.googleapis.com/maps/api/place/details/json?place_id={place_id}&key={api_key}"
-        response = requests.get(url)
-        place_details = response.json()["result"]
-        dermatologists.append(
-            {
-                "name": place_details["name"],
-                "address": place_details["formatted_address"],
-            }
-        )
+    # Parse the geocoding response
+    geocode_data = geocode_response.json()
 
-    # Display the results in Streamlit
-    st.header("Results")
-    for i, dermatologist in enumerate(dermatologists, start=1):
-        # st.markdown(f"**{dermatologist['name']}**")
-        # st.markdown(dermatologist["address"])
-        st.markdown(
-            f"""
-            {i}. **{dermatologist['name']}**
-            > **Address:** {dermatologist['address']}
-            """
-        )
+    # Extract the latitude and longitude from the geocoding response
+    lat = geocode_data['results'][0]['geometry']['location']['lat']
+    lng = geocode_data['results'][0]['geometry']['location']['lng']
+
+    # Parameters for the Places API request
+    places_params = {
+        "location": f"{lat},{lng}",  # Latitude and longitude
+        "radius": 5000,  # Search radius in meters
+        "type": "dermatologist",  # Type of place to search for
+        "key": api_key,  # Your Google Places API key
+    }
+
+    # Send the Places API request
+    places_response = requests.get(url, params=places_params)
+
+    # Parse the Places response
+    places_data = places_response.json()
+
+    # Extract the clinic locations from the Places response
+    clinics = pd.DataFrame([{
+        'lat': result['geometry']['location']['lat'],
+        'lon': result['geometry']['location']['lng'],
+    } for result in places_data['results']])
+
+    # Display the clinics on a map
+    st.subheader("Dermatologists Near You")
+    st.map(clinics)
