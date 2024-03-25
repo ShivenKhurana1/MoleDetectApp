@@ -5,7 +5,6 @@ import streamlit as st
 import pandas as pd
 import matplotlib.pyplot as plt
 import requests
-from langchain import PromptTemplate
 import seaborn as sns
 from transformers import pipeline
 import pytesseract
