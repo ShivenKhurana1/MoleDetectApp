@@ -15,6 +15,7 @@ comm==0.1.2
 commonmark==0.9.1
 debugpy==1.6.4
 decorator==5.1.1
+dotenv==16.4.5
 entrypoints==0.4
 executing==1.2.0
 flatbuffers==22.12.6
