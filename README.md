@@ -1,4 +1,4 @@
-# PoweringSTEMHacks
+# MoleDetect
 
 ## Running
 
