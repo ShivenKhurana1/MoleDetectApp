@@ -7,7 +7,6 @@ import matplotlib.pyplot as plt
 import requests
 import seaborn as sns
 from transformers import pipeline
-import pytesseract
 from PIL import Image
 from dotenv import load_dotenv
 import os
