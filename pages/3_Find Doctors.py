@@ -22,7 +22,6 @@ st.set_page_config(
 )
 
 st.title('Moledetect: Dermafinder')
-st.subheader("Your AI Blood Health Expert")
 
 # Google Places API URL- Converts lat.lng into map data
 url = "https://maps.googleapis.com/maps/api/place/nearbysearch/json"
