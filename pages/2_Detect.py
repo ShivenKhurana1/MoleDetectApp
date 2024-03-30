@@ -86,6 +86,7 @@ with st.container():
     st.write("##")
     st.write(
         """
+        
         - If confidence is <50%: There is a high chance that the diagnosis is incorrect. 
         - If confidence is 50-60%: You should closely monitor your mole and still get it checked out by your doctor.
         - If confidence is 61-80%: There is a high chance that the diagnosis is correct. Recommended to immediately consult your  dermatologist and take further actions.
