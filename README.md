@@ -1,6 +1,6 @@
 # MoleDetect
 
-## Running
+## Running Locally
 
 1. Create a virtual environment
 
